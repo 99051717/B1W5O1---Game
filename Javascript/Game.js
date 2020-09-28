@@ -6,48 +6,27 @@ alert("welkom in de game!");
 alert("Laten we beginnen");
 
 //scenario begin
-var vraag1 = prompt("je bent thuis en het regent maar je moet je medicijnen hebben ga je naar buiten ?");
+var vraag1 = prompt("je bent thuis en het regent maar je moet je medicijnen hebben ga je naar buiten?");
 if (vraag1 == "ja") {
     alert("je gaat dus naar buiten");
 } else {
-    alert("game over");
-    throw new Error('Game Over');
-}
+    alert("game over")
+    throw new Error('Game Over');}
+    
+    var vraag2 =prompt("je bent buiten maar pak je de auto ?");
+    if (vraag2 === "ja") {
+        alert("slimme keuze")
+        
 //scenario auto
-var vraag2 =prompt("je bent buiten maar pak je de auto ?");
 
-if (vraag2 === "ja") {
-    alert("slimme keuze");
-}else  {
-    alert("dat wordt lopen dus");
-
-
-
-
-var vraag3 =prompt("ga je tanken ?");
-
+var vraag3 =prompt("Je komt bij een tankstation en je moet eigenlijk ook tanken. Ga je tanken ?")
 if (vraag3 === "ja"){
     alert("mooi je gaat dus tanken");      
 }else  {
-    alert("dat wordt lopen dus");
+    alert("zonder brandstof kom je niet ver <Game Over>")
+    throw new Error('Game Over');}
+   
 
-var vraag4 =prompt("je benen worden moe maar je komt bij een leeg staand huis ga je naar binnen ?")
-    if (vraag4 === "ja"){
-        alert("Niet heel slim om een random huis binnen te gaan. <Game Over>")
-        throw new Error('Game Over');
-    }else {
-        alert("je loopt dus verder");
-        vraag4= prompt("je hebt geen energie meer en je kan eigenlijk niet meer verder. Ga je toch verder ?");
-            if (vraag4 == "ja"){
-            alert("je valt neer en heb je medicijnen niet binnen de tijd kunnen halen <game over>")
-            window.stop();
-        }else {
-            alert("je hebt het opgegeven <Game over>")
-            throw new Error('Game Over');
-        }
-
-    }
-}
 
 //scenario man    
 var vraag5 =prompt("er staat iemand langs de weg met een hoed en een donkere lange jas. hij vraagt om hulp. Ga je helpen ?");
@@ -87,4 +66,28 @@ if (vraag6 == "ja"){
      throw new Error('Game Over');
     }
 }
+
+
+    }else {
+    
+        
+    
+    alert("dat word lopen dus")
+    var vraag4 =prompt("je benen worden moe maar je komt bij een leeg staand huis ga je naar binnen ?")
+if (vraag4 === "ja"){
+    alert("Niet heel slim om een random huis binnen te gaan. <Game Over>")
+    throw new Error('Game Over');
+}else {
+    alert("je loopt dus verder");
+    vraag4= prompt("je hebt geen energie meer en je kan eigenlijk niet meer verder. Ga je toch verder ?");
+        if (vraag4 == "ja"){
+        alert("je valt neer en heb je medicijnen niet binnen de tijd kunnen halen <game over>")
+        throw new Error('Game Over');
+    }else {
+        alert("je hebt het opgegeven <Game over>")
+        throw new Error('Game Over');}
+    }
+
 }
+
+
